@@ -12,8 +12,11 @@
     tools:context="com.danielradding.crunchtime.MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <TextView
+    <Spinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:id="@+id/spinner"
+        android:layout_alignParentStart="true"
+        android:spinnerMode="dropdown"
+        android:entries="@array/exercise_array" />
 </RelativeLayout>
