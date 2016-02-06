@@ -10,6 +10,7 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -78,6 +79,41 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
             }
+        });
+
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                final String ex = spinner.getSelectedItem().toString();
+                final String ex2 = spinner2.getSelectedItem().toString();
+                exType.setText(func.exType(ex));
+                double num = Double.parseDouble(ED2.getText().toString());
+                double converted = func.convert(num, ex, ex2);
+                ED2.setText(String.valueOf(converted));
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parentView) {
+            }
+
+        });
+
+        spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                final String ex = spinner2.getSelectedItem().toString();
+                final String ex2 = spinner2.getSelectedItem().toString();
+                exType2.setText(func.exType(ex2));
+                double num = Double.parseDouble(ED.getText().toString());
+                double converted = func.convert(num, ex2, ex);
+                ED.setText(String.valueOf(converted));
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parentView) {
+            }
+
         });
 
 
