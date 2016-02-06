@@ -14,9 +14,6 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import com.danielradding.crunchtime.functions;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -37,12 +34,12 @@ public class MainActivity extends AppCompatActivity {
 
         final EditText ED = (EditText)findViewById(R.id.editText);
         final EditText ED2 = (EditText)findViewById(R.id.editText2);
-
         final Spinner spinner = (Spinner)findViewById(R.id.spinner);
-
         final Spinner spinner2 = (Spinner)findViewById(R.id.spinner2);
 
-//        ED1.setOnClickListener(new View.OnClickListener() {
+        final functions func = new functions();
+
+//        ED.setOnClickListener(new View.OnClickListener() {
 //
 //            @Override
 //            public void onClick(View v) {
@@ -54,10 +51,17 @@ public class MainActivity extends AppCompatActivity {
             public void onTextChanged(CharSequence a, int b, int c, int d) {}
             public void beforeTextChanged(CharSequence a, int b, int c, int d) {}
             public void afterTextChanged(Editable s) {
-                String ex = spinner.getSelectedItem().toString();
-                String ex2 = spinner.getSelectedItem().toString();
-                //ED2.setText("123");
-            };
+                final String ex = spinner.getSelectedItem().toString();
+                final String ex2 = spinner.getSelectedItem().toString();
+                ED.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        double num = Double.parseDouble(ED.getText().toString());
+                        double converted = func.convert(num, ex, ex2);
+                        ED2.setText(String.valueOf(converted));
+                    }
+                });
+            }
         });
 
 
