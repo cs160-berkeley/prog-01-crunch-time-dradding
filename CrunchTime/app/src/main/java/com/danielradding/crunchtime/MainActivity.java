@@ -12,6 +12,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
+
 import com.danielradding.crunchtime.functions;
 
 public class MainActivity extends AppCompatActivity {
@@ -36,16 +38,9 @@ public class MainActivity extends AppCompatActivity {
         final EditText ED2 = (EditText)findViewById(R.id.editText2);
         final Spinner spinner = (Spinner)findViewById(R.id.spinner);
         final Spinner spinner2 = (Spinner)findViewById(R.id.spinner2);
-
+        final TextView exType = (TextView)findViewById(R.id.textView2);
+        final TextView exType2 = (TextView)findViewById(R.id.textView3);
         final functions func = new functions();
-
-//        ED.setOnClickListener(new View.OnClickListener() {
-//
-//            @Override
-//            public void onClick(View v) {
-//
-//            }
-//        });
 
         ED.addTextChangedListener(new TextWatcher() {
             public void onTextChanged(CharSequence a, int b, int c, int d) {}
@@ -53,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
             public void afterTextChanged(Editable s) {
                 final String ex = spinner.getSelectedItem().toString();
                 final String ex2 = spinner2.getSelectedItem().toString();
+                exType.setText(func.exType(ex));
+                exType2.setText(func.exType(ex2));
                 ED.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -70,6 +67,8 @@ public class MainActivity extends AppCompatActivity {
             public void afterTextChanged(Editable s) {
                 final String ex = spinner.getSelectedItem().toString();
                 final String ex2 = spinner2.getSelectedItem().toString();
+                exType.setText(func.exType(ex));
+                exType2.setText(func.exType(ex2));
                 ED2.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
