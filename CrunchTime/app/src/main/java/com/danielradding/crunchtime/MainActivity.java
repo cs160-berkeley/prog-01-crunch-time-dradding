@@ -8,6 +8,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Spinner;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,6 +30,29 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        Map<String,Integer> map = new HashMap<String, Integer>();
+        map.put("Pushup", 350);
+        map.put("Situp", 200);
+        map.put("Jumping Jacks", 10);
+        map.put("Jogging", 12);
+        map.put("Squats", 225);
+        map.put("Leg-lift", 25);
+        map.put("Plank", 25);
+        map.put("Pullup", 100);
+        map.put("Cycling", 12);
+        map.put("Walking", 20);
+        map.put("Swimming", 13);
+        map.put("Stair-Climbing", 15);
+        
+
+        Spinner spinner = (Spinner)findViewById(R.id.spinner);
+        String exercise = spinner.getSelectedItem().toString();
+
+        Spinner spinner2 = (Spinner)findViewById(R.id.spinner2);
+        String exercise2 = spinner.getSelectedItem().toString();
+
+
     }
 
     @Override

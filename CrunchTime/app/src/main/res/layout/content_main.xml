@@ -16,7 +16,38 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/spinner"
-        android:layout_alignParentStart="true"
         android:spinnerMode="dropdown"
-        android:entries="@array/exercise_array" />
+        android:entries="@array/exercise_array"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="110dp" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner2"
+        android:entries="@array/exercise_array"
+        android:layout_marginBottom="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/spinner" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:layout_alignBottom="@+id/spinner"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/spinner2" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/editText2"
+        android:layout_alignBottom="@+id/spinner2"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/spinner2" />
 </RelativeLayout>
