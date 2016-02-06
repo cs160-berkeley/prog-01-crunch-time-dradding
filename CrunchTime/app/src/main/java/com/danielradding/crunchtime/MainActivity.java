@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
             public void beforeTextChanged(CharSequence a, int b, int c, int d) {}
             public void afterTextChanged(Editable s) {
                 final String ex = spinner.getSelectedItem().toString();
-                final String ex2 = spinner.getSelectedItem().toString();
+                final String ex2 = spinner2.getSelectedItem().toString();
                 ED.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
