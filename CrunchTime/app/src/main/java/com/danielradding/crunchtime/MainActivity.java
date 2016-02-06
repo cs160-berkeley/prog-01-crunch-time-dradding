@@ -64,6 +64,23 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        ED2.addTextChangedListener(new TextWatcher() {
+            public void onTextChanged(CharSequence a, int b, int c, int d) {}
+            public void beforeTextChanged(CharSequence a, int b, int c, int d) {}
+            public void afterTextChanged(Editable s) {
+                final String ex = spinner.getSelectedItem().toString();
+                final String ex2 = spinner2.getSelectedItem().toString();
+                ED2.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        double num = Double.parseDouble(ED2.getText().toString());
+                        double converted = func.convert(num, ex2, ex);
+                        ED.setText(String.valueOf(converted));
+                    }
+                });
+            }
+        });
+
 
     }
 
