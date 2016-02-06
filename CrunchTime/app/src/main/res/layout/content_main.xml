@@ -18,18 +18,16 @@
         android:id="@+id/spinner"
         android:spinnerMode="dropdown"
         android:entries="@array/exercise_array"
-        android:layout_marginTop="104dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="170dp" />
+        android:layout_below="@+id/editText"
+        android:layout_alignParentStart="true" />
 
     <Spinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/spinner2"
         android:entries="@array/exercise_array"
-        android:layout_centerVertical="true"
-        android:layout_alignStart="@+id/spinner" />
+        android:layout_below="@+id/editText2"
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -37,9 +35,8 @@
         android:inputType="numberDecimal"
         android:ems="10"
         android:id="@+id/editText"
-        android:layout_alignBottom="@+id/spinner"
-        android:layout_alignParentStart="true"
-        android:layout_toStartOf="@+id/spinner2" />
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/textView" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -47,8 +44,35 @@
         android:inputType="numberDecimal"
         android:ems="10"
         android:id="@+id/editText2"
-        android:layout_alignBottom="@+id/spinner2"
-        android:layout_alignParentStart="true"
-        android:layout_toStartOf="@+id/spinner2"
-        android:editable="false" />
+        android:editable="false"
+        android:layout_alignTop="@+id/textView3"
+        android:layout_toStartOf="@+id/textView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="is the same as"
+        android:id="@+id/textView"
+        android:layout_below="@+id/spinner"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/textView2"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/editText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/textView3"
+        android:layout_marginTop="31dp"
+        android:layout_below="@+id/textView"
+        android:layout_toEndOf="@+id/editText2" />
 </RelativeLayout>

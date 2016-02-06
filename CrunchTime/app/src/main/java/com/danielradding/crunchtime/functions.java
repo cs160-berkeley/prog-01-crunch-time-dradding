@@ -1,7 +1,9 @@
 package com.danielradding.crunchtime;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * Created by daniel on 2/6/16.
@@ -36,5 +38,17 @@ public class functions {
         System.out.println("func result" + String.valueOf(rtn));
         return rtn;
 
+    }
+
+    public String exType(String ex) {
+        Set<String> reps = new HashSet<String>();
+        reps.add("Pushups");
+        reps.add("Situps");
+        reps.add("Squats");
+        reps.add("Pullups");
+        if (reps.contains(ex)) {
+            return "reps of";
+        }
+        return "minutes of";
     }
 }
