@@ -5,10 +5,14 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
 import android.widget.Spinner;
+import com.danielradding.crunchtime.functions;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -22,35 +26,39 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
+//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+//            }
+//        });
+
+        final EditText ED = (EditText)findViewById(R.id.editText);
+        final EditText ED2 = (EditText)findViewById(R.id.editText2);
+
+        final Spinner spinner = (Spinner)findViewById(R.id.spinner);
+
+        final Spinner spinner2 = (Spinner)findViewById(R.id.spinner2);
+
+//        ED1.setOnClickListener(new View.OnClickListener() {
+//
+//            @Override
+//            public void onClick(View v) {
+//
+//            }
+//        });
+
+        ED.addTextChangedListener(new TextWatcher() {
+            public void onTextChanged(CharSequence a, int b, int c, int d) {}
+            public void beforeTextChanged(CharSequence a, int b, int c, int d) {}
+            public void afterTextChanged(Editable s) {
+                String ex = spinner.getSelectedItem().toString();
+                String ex2 = spinner.getSelectedItem().toString();
+                //ED2.setText("123");
+            };
         });
-
-        Map<String,Integer> map = new HashMap<String, Integer>();
-        map.put("Pushup", 350);
-        map.put("Situp", 200);
-        map.put("Jumping Jacks", 10);
-        map.put("Jogging", 12);
-        map.put("Squats", 225);
-        map.put("Leg-lift", 25);
-        map.put("Plank", 25);
-        map.put("Pullup", 100);
-        map.put("Cycling", 12);
-        map.put("Walking", 20);
-        map.put("Swimming", 13);
-        map.put("Stair-Climbing", 15);
-        
-
-        Spinner spinner = (Spinner)findViewById(R.id.spinner);
-        String exercise = spinner.getSelectedItem().toString();
-
-        Spinner spinner2 = (Spinner)findViewById(R.id.spinner2);
-        String exercise2 = spinner.getSelectedItem().toString();
 
 
     }
