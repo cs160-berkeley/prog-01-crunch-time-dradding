@@ -15,6 +15,10 @@ See [Daniel Radding Proj1 cs160](https://youtu.be/TVvo7ocGvB8)
 ## Screenshots
 
 <img src="screenshots/main.png" height="400" alt="Screenshot"/>
+<img src="screenshots/select1.png" height="400" alt="Screenshot"/>
+<img src="screenshots/select2.png" height="400" alt="Screenshot"/>
+
+
 
 ## [Github](https://github.com/cs160-sp16/prog-01-crunch-time-dradding)
 
