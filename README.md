@@ -1,10 +1,10 @@
 # PROG 01: Crunch Time
 
-Briefly describe your app here.
+Crunch is a simple yet functional app that lets you the equivalent amount of different exercises in respect to the number of calories burned.
 
 ## Authors
 
-FirstName LastName ([your_email@berkeley.edu](mailto:your_email@berkeley.edu))
+Daniel Radding ([dradding@berkeley.edu](mailto:dradding@berkeley.edu))
 
 ## Demo Video
 
@@ -16,7 +16,5 @@ See [Daniel Radding Proj1 cs160] (https://youtu.be/TVvo7ocGvB8)
 
 ## Acknowledgments
 
-* Hat tip to anyone who's code was used
-* Any other support
-
-*Feel free to enhance your README. For Markdown syntax, see [the GitHub Guides](https://guides.github.com/features/mastering-markdown/). Remove this line in your submission.*
+* Android/Java Docs
+* Stackoverflow
