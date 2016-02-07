@@ -33,8 +33,8 @@ public class functions {
         double val = map.get(ex);
         double val2 = map.get(ex2);
 
-        double rtn = val * num;
-        rtn = rtn/val2;
+        double rtn = val2 * num;
+        rtn = rtn/val;
         System.out.println("func result" + String.valueOf(rtn));
         return rtn;
 

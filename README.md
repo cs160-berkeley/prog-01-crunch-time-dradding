@@ -8,7 +8,7 @@ FirstName LastName ([your_email@berkeley.edu](mailto:your_email@berkeley.edu))
 
 ## Demo Video
 
-See [your demo video title here] (https://link_to_your_video)
+See [Daniel Radding Proj1 cs160] (https://youtu.be/TVvo7ocGvB8)
 
 ## Screenshots
 
